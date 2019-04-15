@@ -1,0 +1,28 @@
+<ActionBar class="action-bar">
+  <Label class="action-bar-title" text="Home"></Label>
+</ActionBar>
+<!--
+<StackLayout>
+  <Fab
+    (tap)="newRecipe()"
+    text="+"
+    rippleColor="#f1f1f1"
+    class="fab-button"
+  ></Fab>
+</StackLayout>
+-->
+<GridLayout class="page page-content">
+  <RadListView [items]="items" class="list-group">
+    <ng-template tkListItemTemplate let-item="item">
+      <StackLayout orientation="vertical">
+        <Label [nsRouterLink]="['../item', item.id]" class="m-10 h3">
+          <FormattedString>
+            <Span [text]="item.name"> </Span>
+            <Span text=" - "></Span>
+            <Span [text]="item.variant"> </Span>
+          </FormattedString>
+        </Label>
+      </StackLayout>
+    </ng-template>
+  </RadListView>
+</GridLayout>

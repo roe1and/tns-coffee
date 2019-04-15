@@ -1,0 +1,45 @@
+<Page xmlns:df="nativescript-ui-dataform">
+<ActionBar class="action-bar">
+  <NavigationButton
+    (tap)="onBackTap()"
+    android.systemIcon="ic_menu_back"
+  ></NavigationButton>
+  <Label class="action-bar-title" [text]="item.name"></Label>
+</ActionBar>
+
+<StackLayout>
+    <df:RadDataForm id="myDataForm" source="{{ item }}" >
+      <EntityProperty name="name" displayName="Title" index="0"></EntityProperty>
+      <EntityProperty name="variant" displayName="Variant" index="1"></EntityProperty>
+    </RadDataForm>
+</StackLayout>
+
+</Page>
+<!--
+<StackLayout
+  ><FlexboxLayout>
+    <Label class="title m-10 h3" text="Name: "></Label>
+    <Label class="m-10 h3" [text]="item.name"></Label>
+  </FlexboxLayout>
+  <FlexboxLayout>
+    <Label class="title m-10 h3" text="Weight: "></Label>
+    <Label class="m-10 h3" [text]="item.weight"></Label>
+  </FlexboxLayout>
+  <FlexboxLayout>
+    <Label class="title m-10 h3" text="ID: "></Label>
+    <Label class="m-10 h3" [text]="item.id"></Label>
+  </FlexboxLayout>
+  <FlexboxLayout>
+    <Label class="title m-10 h3" text="Description: "></Label>
+    <Label class="m-10 h3" [text]="item.description"></Label>
+  </FlexboxLayout>
+  <FlexboxLayout>
+    <Label class="title m-10 h3" text="Start temp: "></Label>
+    <Label class="m-10 h3" [text]="item.starttemp"></Label>
+  </FlexboxLayout>
+  <FlexboxLayout>
+    <Label class="title m-10 h3" text="Main temp: "></Label>
+    <Label class="m-10 h3" [text]="item.temp"></Label>
+  </FlexboxLayout>
+</StackLayout>
+-->
