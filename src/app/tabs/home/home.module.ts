@@ -6,12 +6,15 @@ import { HomeComponent } from "./home.component";
 import { ItemDetailComponent } from "./item-detail/item-detail.component";
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { NativeScriptUIDataFormModule } from "nativescript-ui-dataform/angular";
+
 @NgModule({
     imports: [
         NativeScriptCommonModule,
         HomeRoutingModule,
         NativeScriptUIListViewModule,
-        NativeScriptFormsModule
+        NativeScriptFormsModule,
+        NativeScriptUIDataFormModule
     ],
     declarations: [
         HomeComponent,
